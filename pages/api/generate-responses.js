@@ -29,12 +29,12 @@ export default async function handler(req, res) {
       },
       {
         role: "user",
-        content: question
+        content: round === 1 ? question : `Respond to this statement: "${previousResponses[previousResponses.length - 1]}"`
       }
     ];
 
-    // Add previous responses to the conversation
-    previousResponses.forEach((response, index) => {
+    // Add previous responses to the conversation (excluding the last one as we're responding to it)
+    previousResponses.slice(0, -1).forEach((response, index) => {
       const speaker = (index % 2 === 0) ? speakingFirst : (speakingFirst === 'trump' ? 'obama' : 'trump');
       messages.push({
         role: "assistant",
