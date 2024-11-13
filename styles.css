@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.debate-input {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#questionInput {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.debate-stage {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.candidate {
+    width: 45%;
+    text-align: center;
+}
+
+.candidate img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.speech-bubble {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    min-height: 100px;
+} 
